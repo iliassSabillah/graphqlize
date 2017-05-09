@@ -54,7 +54,23 @@ let schema = new GraphQLSchema({
         },
         resolve: resolver(models.Pokemon)
       }
-    }
+    },
+      // mutation: {
+      //     pokemon: {
+      //         // The resolver will use `findOne` or `findAll` depending on whether the field it's used in is a `GraphQLList` or not.
+      //         type: new GraphQLList(pokemonType),
+      //         args: {
+      //             // An arg with the key limit will automatically be converted to a limit on the target
+      //             limit: {
+      //                 type: GraphQLInt
+      //             },
+      //             // An arg with the key order will automatically be converted to a order on the target
+      //             order: {
+      //                 type: GraphQLString
+      //             }
+      //         },
+      //     }
+      // }
   })
 });
 
